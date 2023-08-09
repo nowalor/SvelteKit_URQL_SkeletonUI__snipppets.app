@@ -19,4 +19,12 @@ const GetSnippets = gql`
 	}
 `;
 
-export { GetSnippets };
+const GetLanguages = gql`
+	query {
+		languages {
+			name
+		}
+	}
+`;
+
+export { GetSnippets, GetLanguages };

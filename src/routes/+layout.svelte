@@ -5,8 +5,10 @@
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
-	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
+	import { AppShell, AppBar, storeHighlightJs } from '@skeletonlabs/skeleton';
 	import { Client, setContextClient, cacheExchange, fetchExchange } from '@urql/svelte';
+	import hljs from 'highlight.js';
+	import 'highlight.js/styles/github-dark.css';
 
 	const client = new Client({
 		url: `http://localhost:5000/graphql`,
@@ -14,6 +16,8 @@
 	});
 
 	setContextClient(client);
+
+	storeHighlightJs.set(hljs);
 </script>
 
 <!-- App Shell -->
