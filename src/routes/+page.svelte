@@ -4,7 +4,7 @@
 	import LanguageList from '../components/languages/language-list.svelte';
 </script>
 
-<div class="container h-full mx-auto flex justify-center items-center">
+<div class="container h-full mx-auto">
 	<LanguageList />
 	<SnippetList />
 	<CodeBlock code="<div>hello<div/>" />

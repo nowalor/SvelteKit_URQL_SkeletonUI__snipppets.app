@@ -9,14 +9,18 @@
 	});
 </script>
 
-<div>
+<div class="card w-1/2 pt-2">
 	{#if $languages.fetching}
 		...fetching
 	{:else if $languages.error}
 		TODO handle error..
 	{:else}
-		{#each $languages.data.languages as language}
-			<div>{language.name}</div>
-		{/each}
+		<div class="flex gap-2 justify-around p-4">
+			{#each $languages.data.languages as language}
+				<div class="variant-filled-surface py-2 w-44 text-xl flex justify-center rounded">
+					{language.name}
+				</div>
+			{/each}
+		</div>
 	{/if}
 </div>
